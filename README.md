@@ -13,8 +13,7 @@ Backup if you got stuff
 Get it, link it
 -----------
 
-    git clone git@github.com:colczak/chuckvim.git
-    ln -s chuckvim .vim
+    git clone git@github.com:colczak/chuckvim.git .vim
     ln -s ~/.vim/gvimrc.osx ~/.gvimrc
     ln -s ~/.vim/vimrc.osx ~/.vimrc
 
