@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
+
 # Checkout and make a plugin for this:
 # http://efiquest.org/2010-09-24/49/
-#
 
 git_bundles = [ 
   "git://github.com/msanders/snipmate.vim.git",
