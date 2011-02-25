@@ -2,21 +2,24 @@ Chuck's VIM files
 
 To VIM like Chuck:
 
-* Backup if you got stuff
+Backup if you got stuff
+-----------
 
     cd ~
     mv .vim .vim.me
     mv .vimrc .vimrc.me
     mv .gvimrc .gvimrc.me
 
-* Get it, link it
+Get it, link it
+-----------
 
     git clone git@github.com:colczak/chuckvim.git
     ln -s chuckvim .vim
     ln -s ~/.vim/gvimrc.osx ~/.gvimrc
     ln -s ~/.vim/vimrc.osx ~/.vimrc
 
-* Unbundle it
+Unbundle it
+-----------
 
     cd .vim
     update_bundles.rb
