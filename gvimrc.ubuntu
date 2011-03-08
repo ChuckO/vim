@@ -1,0 +1,51 @@
+
+:colorscheme railscasts
+
+:set wildmenu
+:set wildmode=list:longest
+:set number
+
+:set autochdir
+
+:set softtabstop=2
+:set shiftwidth=2
+:set tabstop=2
+:set expandtab
+
+" <leader> is whatever the heck mapleader is set to, not the most obvious
+:let mapleader = ","
+
+:map <F5> :NERDTreeToggle<Enter>
+:map <leader>n :bnext<Enter>
+:map <leader>m :bprev<Enter>
+:map <M-n> :bnext<Enter>
+:map <M-p> :bprev<Enter>
+:map <M-g> :call vimlib#gitDir()<Enter>
+:map <M-t> :call vimlib#projectFuzzyFind()<Enter>
+:map <M-f> :Ggrep 
+:map <M-b> :FufBuffer<Enter>
+:map <M-o> m`O<ESC>``
+
+"Comment and uncomment ruby, not the best but works and fast
+:map <M-/> :s/^/#/<Enter>
+:map <M-?> :s/^#//<Enter>
+
+"If on a spec or unit test will run that test
+:map <M-r> :Rake<Enter>
+
+" One mapping to select them ALL!  wow you gotta get this
+:nmap <C-a> ggVG
+
+" Cut and paste to/from the system keyboard,  This is really useful on Linux,
+" macs don't need it
+:map <M-x> "+x
+:map <M-c> "+y
+:map <M-v> "+gP
+" Kill current buffer but leave winder, uses bufkill plugin
+:map <F9> :BD<Enter> 
+:map <F6> :ConqueTerm bash<Enter> 
+:map <F2> :OpenBrowser http://localhost:3000<Enter>
+
+" Insert text at cursor
+:map! <M-l> Rails.logger.debug "************
+

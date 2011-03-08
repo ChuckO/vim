@@ -1,0 +1,21 @@
+filetype off
+
+if has("gui_running") 
+set guioptions=a
+"    set guioptions=aiA " Disable toolbar, menu bar, scroll bars 
+endif " has("gui_running") 
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+syntax on
+filetype plugin indent on
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set autoindent
+set expandtab
+set hidden
+
+"needed to pickup bashrc
+set shell=/bin/bash\ --login

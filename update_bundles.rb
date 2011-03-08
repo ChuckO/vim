@@ -6,19 +6,20 @@
 git_bundles = [ 
   "git://github.com/msanders/snipmate.vim.git",
   "git://github.com/scrooloose/nerdtree.git",
-  "git://github.com/timcharper/textile.vim.git",
-  "git://github.com/tpope/vim-git.git",
   "git://github.com/tpope/vim-markdown.git",
   "git://github.com/tpope/vim-rails.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/rson/vim-conque",
-  "git://github.com/flazz/vim-colorschemes.git",
   "git://github.com/vim-scripts/bufkill.vim",
   "git://github.com/vim-scripts/L9",
   "git://github.com/vim-scripts/FuzzyFinder.git",
+  "git://github.com/tpope/vim-fugitive.git",
+  "git://github.com/tyru/open-browser.vim",
+#  "git://github.com/timcharper/textile.vim.git",
+#  "git://github.com/tpope/vim-git.git",
+#  "git://github.com/flazz/vim-colorschemes.git",
 ##  "git://github.com/astashov/vim-ruby-debugger.git",
 #  "git://github.com/tpope/vim-cucumber.git",
-#  "git://github.com/tpope/vim-fugitive.git",
 #  "git://github.com/tpope/vim-haml.git",
 #  "git://github.com/tpope/vim-repeat.git",
 #  "git://github.com/tpope/vim-surround.git",
@@ -32,6 +33,8 @@ vim_org_scripts = [
   ["IndexedSearch", "7062",  "plugin"],
   ["gist",          "12732", "plugin"],
   ["jquery",        "12107", "syntax"],
+  ["railscasts",    "8379",  "colors"],
+  ["bufonly",       "3388",  "plugin"],
 ]
 
 require 'fileutils'
@@ -41,8 +44,8 @@ bundles_dir = File.join(File.dirname(__FILE__), "bundle")
 
 FileUtils.cd(bundles_dir)
 
-puts "Trashing everything (lookout!)"
-Dir["*"].each {|d| FileUtils.rm_rf d }
+puts "Trashing everything but symlinks(lookout!)"
+Dir["*"].each {|d| FileUtils.rm_rf( d ) unless File.symlink?(d) }
 
 git_bundles.each do |url|
   dir = url.split('/').last.sub(/\.git$/, '')
