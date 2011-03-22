@@ -25,6 +25,7 @@
 :map <M-f> :Ggrep 
 :map <M-b> :FufBuffer<Enter>
 :map <M-o> m`O<ESC>``
+:map <M-w> :BufOnly<Enter>:BD<Enter>
 
 "Comment and uncomment ruby, not the best but works and fast
 :map <M-/> :s/^/#/<Enter>
