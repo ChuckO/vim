@@ -20,10 +20,10 @@ set guioptions-=T
 
 :map <F5> :NERDTreeToggle<Enter>
 :map <M-o> m`O<ESC>``
-:map <C-T> :CommandT<Enter>
-:map <F9> :BD<Enter> 
+":map <C-T> :CommandT<Enter>
+:map <C-T> :FufFileWithCurrentBufferDir<Enter> 
+:map <F7> :BD<Enter> 
 :map <F6> :ConqueTerm bash<Enter> 
-:map <F2> :OpenBrowser http://localhost:3000<Enter>
 :map <F2> :OpenBrowser http://localhost:3000<Enter>
 
 
