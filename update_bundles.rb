@@ -15,6 +15,7 @@ git_bundles = [
   "git://github.com/vim-scripts/FuzzyFinder.git",
   "git://github.com/tpope/vim-fugitive.git",
   "git://github.com/tyru/open-browser.vim",
+  "git://github.com/vim-scripts/AsyncCommand",
 #  "git://github.com/timcharper/textile.vim.git",
 #  "git://github.com/tpope/vim-git.git",
 #  "git://github.com/flazz/vim-colorschemes.git",

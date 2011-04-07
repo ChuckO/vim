@@ -22,7 +22,8 @@
 :map <M-p> :bprev<Enter>
 :map <M-g> :call vimlib#gitDir()<Enter>
 :map <M-t> :call vimlib#projectFuzzyFind()<Enter>
-:map <M-f> :Ggrep 
+":map <M-f> :Ggrep 
+:map <M-f> :VimlibSearch 
 :map <M-b> :FufBuffer<Enter>
 :map <M-o> m`O<ESC>``
 :map <M-w> :BufOnly<Enter>:BD<Enter>
