@@ -11,6 +11,9 @@
 :set shiftwidth=2
 :set tabstop=2
 :set expandtab
+:set statusline=%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P=
+
+:let g:NERDTreeChDirMode=2
 
 " <leader> is whatever the heck mapleader is set to, not the most obvious
 :let mapleader = ","
@@ -33,7 +36,8 @@
 :map <M-?> :s/^#//<Enter>
 
 "If on a spec or unit test will run that test
-:map <M-r> :Rake<Enter>
+":map <M-r> :Rake<Enter>
+:map <M-r> :.Rake<Enter>
 
 " One mapping to select them ALL!  wow you gotta get this
 :nmap <C-a> ggVG
