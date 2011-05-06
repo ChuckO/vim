@@ -47,6 +47,7 @@
 :map <M-x> "+x
 :map <M-c> "+y
 :map <M-v> "+gP
+:imap <M-v> <ESC>"+gPi
 " Kill current buffer but leave winder, uses bufkill plugin
 :map <F9> :BD<Enter> 
 :map <F6> :ConqueTerm bash<Enter> 

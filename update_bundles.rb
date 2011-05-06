@@ -16,6 +16,8 @@ git_bundles = [
   "git://github.com/tpope/vim-fugitive.git",
   "git://github.com/tyru/open-browser.vim",
   "git://github.com/vim-scripts/AsyncCommand",
+  "git://github.com/tpope/vim-surround.git",
+#  "https://github.com/vim-scripts/xml.vim.git",
 #  "git://github.com/timcharper/textile.vim.git",
 #  "git://github.com/tpope/vim-git.git",
 #  "git://github.com/flazz/vim-colorschemes.git",
@@ -23,7 +25,6 @@ git_bundles = [
 #  "git://github.com/tpope/vim-cucumber.git",
 #  "git://github.com/tpope/vim-haml.git",
 #  "git://github.com/tpope/vim-repeat.git",
-#  "git://github.com/tpope/vim-surround.git",
 #  "git://github.com/tsaleh/vim-align.git",
 #  "git://github.com/tsaleh/vim-shoulda.git",
 #  "git://github.com/tsaleh/vim-supertab.git",
@@ -32,7 +33,7 @@ git_bundles = [
 
 vim_org_scripts = [
   ["IndexedSearch", "7062",  "plugin"],
-  ["gist",          "12732", "plugin"],
+#  ["gist",          "12732", "plugin"],
   ["jquery",        "12107", "syntax"],
   ["railscasts",    "8379",  "colors"],
   ["bufonly",       "3388",  "plugin"],
