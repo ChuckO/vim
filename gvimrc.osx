@@ -1,13 +1,21 @@
 
 :colorscheme railscasts 
+" :colorscheme winter
 
 :set wildmenu
+:set wildmode=list:longest
 :set number
 
 " =============  MacVim ==============
-
-set guifont=Monaco:h14
+" Set the following default to prevent macvim from going into Lion fullscreen
+" mode and put an iterm on the left
+" defaults write org.vim.MacVim MMNativeFullScreen 0
+ set guifont=Monaco:h15
 set guioptions-=T
+set guioptions-=L
+set guioptions-=r
+
+:set statusline=%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P=
 
 " make wd relative to path
 "autocmd BufEnter * lcd %:p:h
@@ -18,12 +26,67 @@ set guioptions-=T
 :set tabstop=2
 :set expandtab
 
-:map <F5> :NERDTreeToggle<Enter>
-:map <M-o> m`O<ESC>``
-":map <C-T> :CommandT<Enter>
-:map <C-T> :FufFileWithCurrentBufferDir<Enter> 
-:map <F7> :BD<Enter> 
-:map <F6> :ConqueTerm bash<Enter> 
-:map <F2> :OpenBrowser http://localhost:3000<Enter>
+:let g:NERDTreeChDirMode=2
 
+" For Nerd Commenter
+filetype plugin on
+
+" <leader> is whatever the heck mapleader is set to, not the most obvious
+:let mapleader = ","
+
+:set macmeta
+:map <F5> :NERDTreeToggle<Enter>
+:map <leader>n :bnext<Enter>
+:map <leader>m :bprev<Enter>
+
+:macmenu File.New\ Window key=<nop>
+:map <D-n> :bnext<Enter>
+:nmap <M-n> :bnext<Enter>
+:macm File.Print key=<nop>
+:map <D-p> :bprev<Enter>
+:nmap <M-p> :bprev<Enter>
+":map <M-g> :call vimlib#gitDir()<Enter>
+:macm File.New\ Tab key=<nop>
+:map <D-t> :call vimlib#projectFuzzyFind()<Enter>
+:nmap <M-t> :call vimlib#projectFuzzyFind()<Enter>
+:macm Edit.Find.Find\.\.\. key=<nop>
+":map <D-f> :Ggrep
+":nmap <M-f> :Ggrep
+":map <D-f> :VimlibSearch
+":nmap <M-f> :VimlibSearch
+:map <D-f> :Search<Space>
+:nmap <M-f> :Search<Space>
+:map <leader>f :SearchCurrentWord<Enter>
+:macm Tools.Make key=<nop>
+:map <D-b> :FufBuffer<Enter>
+:nmap <M-b> :FufBuffer<Enter>
+":macm File.Open key=<nop>
+:nmap <M-o> m`O<ESC>``
+:macm File.Close key=<nop>
+:map <D-w> :BufOnly<Enter>:BD<Enter>
+:nmap <M-w> :BufOnly<Enter>:BD<Enter>
+
+:map <D-/> gC
+:nmap <M-/> gC
+
+" One mapping to select them ALL! wow you gotta get this
+:nmap <C-a> ggVG
+
+" Kill current buffer but leave winder, uses bufkill plugin
+:map <F8> :BD<Enter>
+:map <F6> :ConqueTerm bash<Enter>
+":map <F2> :OpenBrowser http://localhost:3000<Enter>
+:map <F2> :vsplit<Enter>
+:map <F3> :split<Enter>
+
+" Insert text at cursor
+:macm Tools.List\ Errors key=<nop>
+:map! <D-l> puts "************
+:map! <M-l> puts "************
+
+:nmap <space> zz
+
+autocmd BufRead,BufNewFile *.hamlbars setfiletype haml
+autocmd BufRead,BufNewFile *.coffee setfiletype ruby
+autocmd BufRead,BufNewFile *.thor setfiletype ruby
 

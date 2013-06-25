@@ -4,3 +4,4 @@ tmp/**/*
 *.swp
 bundle/*
 .netrwhist
+vimlib

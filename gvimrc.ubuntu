@@ -31,12 +31,18 @@
 :map <M-o> m`O<ESC>``
 :map <M-w> :BufOnly<Enter>:BD<Enter>
 
+map <m-i> c<%= t '' do %><C-R>"<% end %><ESC>?t '<ESC>lllicontrollers.
+map <m-y> c<%= t '', :en=>'<C-R>"' %><ESC>?t '<ESC>lllicontrollers.
+map <m-u> ct( '', :en=><C-R>" )<ESC>?t( '<ESC>llllicontrollers.
+"map <M-i> i:'<Esc>f=i'<Esc>lli><Esc> 
+"map <M-i> s<fw:intl>
+":map <M-i> ifw:intl{<Esc>f"i}<Esc>
+
 "Comment and uncomment ruby, not the best but works and fast
 :map <M-/> :s/^/#/<Enter>
 :map <M-?> :s/^#//<Enter>
 
 "If on a spec or unit test will run that test
-":map <M-r> :Rake<Enter>
 :map <M-r> :.Rake<Enter>
 
 " One mapping to select them ALL!  wow you gotta get this
@@ -48,6 +54,7 @@
 :map <M-c> "+y
 :map <M-v> "+gP
 :imap <M-v> <ESC>"+gPi
+
 " Kill current buffer but leave winder, uses bufkill plugin
 :map <F9> :BD<Enter> 
 :map <F6> :ConqueTerm bash<Enter> 
