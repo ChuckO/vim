@@ -13,6 +13,8 @@ git_bundles = [
   "git://github.com/flazz/vim-colorschemes.git",
   "git://github.com/ervandew/supertab.git",
   "git://github.com/vim-scripts/ZoomWin.git",
+  "git://github.com/tsaleh/vim-tcomment.git",
+#  "git://github.com/scrooloose/nerdcommenter.git",
 
 # No dice with leader, need to figure leader out
 #  "git://github.com/Lokaltog/vim-easymotion.git",
@@ -21,7 +23,6 @@ git_bundles = [
 #  "git://github.com/scrooloose/syntastic.git",
 
 #  "git://github.com/vim-scripts/AsyncCommand",
-#  "git://github.com/scrooloose/nerdcommenter.git",
 #  "git://github.com/tpope/vim-haml.git",
 #  "git://github.com/msanders/snipmate.vim.git",
 #  "git://github.com/tpope/vim-markdown.git",
@@ -39,7 +40,6 @@ git_bundles = [
 #  "git://github.com/tsaleh/vim-align.git",
 #  "git://github.com/tsaleh/vim-shoulda.git",
 #  "git://github.com/tsaleh/vim-supertab.git",
-#  "git://github.com/tsaleh/vim-tcomment.git",
 ]
 
 vim_org_scripts = [

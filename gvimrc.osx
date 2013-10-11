@@ -66,8 +66,8 @@ filetype plugin on
 :map <D-w> :BufOnly<Enter>:BD<Enter>
 :nmap <M-w> :BufOnly<Enter>:BD<Enter>
 
-:map <D-/> gC
-:nmap <M-/> gC
+:map <D-/> gc
+:nmap <M-/> gc
 
 " One mapping to select them ALL! wow you gotta get this
 :nmap <C-a> ggVG
