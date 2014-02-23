@@ -86,6 +86,7 @@ filetype plugin on
 
 :nmap <space> zz
 
+autocmd BufRead,BufNewFile *.hamlc setfiletype haml
 autocmd BufRead,BufNewFile *.hamlbars setfiletype haml
 autocmd BufRead,BufNewFile *.coffee setfiletype ruby
 autocmd BufRead,BufNewFile *.thor setfiletype ruby
